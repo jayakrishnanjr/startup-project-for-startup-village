@@ -161,43 +161,6 @@ void phase_correlation( IplImage *ref, IplImage *tpl, IplImage *poc )
 }
 
 
-DETAILS OF PROGRAM
-Dependencies:
-	linux (for wget)
-	fftw3(libfftw3)
-	opencv
 
-OPENCV
-OpenCV has a modular structure, which means that the package includes several shared or static libraries. The following modules are available:
-•	core - a compact module defining basic data structures, including the dense multi-dimensional array Mat and basic functions used by all other modules.
-•	imgproc - an image processing module that includes linear and non-linear image filtering, geometrical image transformations (resize, affine and perspective warping, generic table-based remapping), color space conversion, histograms, and so on.
-•	video - a video analysis module that includes motion estimation, background subtraction, and object tracking algorithms.
-•	calib3d - basic multiple-view geometry algorithms, single and stereo camera calibration, object pose estimation, stereo correspondence algorithms, and elements of 3D reconstruction.
-•	features2d - salient feature detectors, descriptors, and descriptor matchers.
-•	objdetect - detection of objects and instances of the predefined classes (for example, faces, eyes, mugs, people, cars, and so on).
-•	highgui - an easy-to-use interface to video capturing, image and video codecs, as well as simple UI capabilities.
-•	gpu - GPU-accelerated algorithms from different OpenCV modules.
-•	... some other helper modules, such as FLANN and Google test wrappers, Python bindings, and others.
-
-FFTW
-
- The FFTW library computes Fast Fourier Transforms (FFT) in one or more
- dimensions. It is extremely fast.
- This package is a transitional package depending on the packages containing
- the single and double precision libraries.
- .
- To get the static library and the header files, you need to install
- libfftw3-dev. For documentation, see libfftw3-doc.
-
-
-
-
-
-Installation and usage:
-1) gcc phase_correlation.c -o phase_correlation `pkg-config --cflags opencv` `pkg-config --cflags fftw3` `pkg-config --libs opencv` `pkg-config --libs fftw3` -lcxcore -lcv -lhighgui -lfftw3
-2)run the code as ./phase_correlation <1st url> <2nd url>
-the file get saved in the directory as jpg.
-
-fftw3 3.3.4-1ubuntu1 source package in Ubuntu: https://launchpad.net/ubuntu/+source/fftw3/3.3.4-1ubuntu1
 
 
